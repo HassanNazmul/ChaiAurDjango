@@ -26,5 +26,8 @@ urlpatterns = [
 
     path('chai/', include('chaiApp.urls')), # Add this line to include chaiApp.urls
 
+    # Auto reload browser on file changes
+    path("__reload__/", include("django_browser_reload.urls")),
+
     # name parameter is used to identify the URL
 ]

@@ -42,9 +42,22 @@ INSTALLED_APPS = [
 # Adding our app to the list of installed apps
 MY_APPS = [
     'chaiApp.apps.ChaiappConfig',
+
+    'tailwind',
+    'theme',
+
+    # Browser reload app
+    'django_browser_reload',
 ]
 
 INSTALLED_APPS += MY_APPS
+
+# Tailwind CSS settings
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = ['127.0.0.1']
+
+# NPM BIN PATH
+NPM_BIN_PATH = '/usr/local/bin/npm'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,6 +67,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Browser reload middleware
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'chaiAurDjango.urls'
