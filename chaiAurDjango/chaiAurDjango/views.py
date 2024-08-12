@@ -7,7 +7,7 @@ from django.shortcuts import render
 # Defining a function named home
 def home(request):
     # Returning a HttpResponse object with a string "Home page"
-    return render(request, 'index.html')
+    return render(request, 'website/index.html')
 
 # Defining a function named about
 def about(request):

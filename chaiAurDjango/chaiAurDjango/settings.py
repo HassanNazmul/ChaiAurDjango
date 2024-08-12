@@ -39,6 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# Adding our app to the list of installed apps
+MY_APPS = [
+    'chaiApp.apps.ChaiappConfig',
+]
+
+INSTALLED_APPS += MY_APPS
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
